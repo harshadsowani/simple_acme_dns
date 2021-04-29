@@ -597,10 +597,10 @@ class ACMEClient:
         if type(self.domains) != list:
             msg = "Domains must be rtype 'list'."
             raise errors.InvalidDomain(msg)
-        for domain in self.domains:
-            if not validators.domain(domain):
-                msg = "Invalid domain name '{domain}'. Domain name must adhere to RFC2181.".format(domain=domain)
-                raise errors.InvalidDomain(msg)
+        #for domain in self.domains:
+        #    if not validators.domain(domain):
+        #        msg = "Invalid domain name '{domain}'. Domain name must adhere to RFC2181.".format(domain=domain)
+        #        raise errors.InvalidDomain(msg)
 
     def __validate_directory__(self):
         """
